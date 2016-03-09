@@ -3,7 +3,7 @@
   "author": "superwolff <superwolff@superwolff.nl> (http://superwolff.nl/)",
   "description": "A metalsmith plugin for generating a robots.txt file",
   "repository": "git://github.com/superwolff/metalsmith-robots.git",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
