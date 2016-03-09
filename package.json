@@ -1,0 +1,24 @@
+{
+  "name": "metalsmith-robots",
+  "author": "superwolff <superwolff@superwolff.nl> (http://superwolff.nl/)",
+  "description": "A metalsmith plugin for generating a robots.txt file",
+  "repository": "git://github.com/superwolff/metalsmith-robots.git",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "robotize": "^1.0.0"
+  },
+  "devDependencies": {
+    "assert-dir-equal": "^1.0.1",
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.1",
+    "metalsmith": "^2.1.0",
+    "mocha": "^2.4.5"
+  }
+}

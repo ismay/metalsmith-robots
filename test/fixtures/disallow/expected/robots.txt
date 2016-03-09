@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: disallowed-1.html
+Disallow: disallowed-2.html

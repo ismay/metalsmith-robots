@@ -1,0 +1,3 @@
+User-agent: *
+Allow: allowed-1.html
+Allow: allowed-2.html
