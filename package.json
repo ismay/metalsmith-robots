@@ -11,15 +11,17 @@
     "test": "mocha --reporter spec"
   },
   "dependencies": {
-    "debug": "^2.2.0",
-    "robotize": "^1.0.0"
+    "debug": "^3.1.0",
+    "robotize": "^1.0.1"
   },
   "devDependencies": {
-    "assert-dir-equal": "^1.0.1",
-    "eslint": "^2.3.0",
-    "eslint-config-airbnb": "^6.1.0",
-    "eslint-plugin-react": "^4.2.1",
-    "metalsmith": "^2.1.0",
-    "mocha": "^2.4.5"
+    "assert-dir-equal": "^1.1.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "metalsmith": "^2.3.0",
+    "mocha": "^5.0.1"
   }
 }

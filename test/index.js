@@ -1,5 +1,4 @@
 /* eslint-env mocha */
-'use strict';
 
 const equal = require('assert-dir-equal');
 const metalsmith = require('metalsmith');
@@ -54,6 +53,35 @@ describe('metalsmith-robots', () => {
           return done(err);
         }
         equal('test/fixtures/private/expected', 'test/fixtures/private/build');
+        return done();
+      });
+  });
+
+  it('should mangle paths with provided function', (done) => {
+    metalsmith('test/fixtures/private-mangle')
+      .use(robots({
+        urlMangle: (filepath) => {
+          const index = 'index.html';
+          let newPath = filepath;
+
+          // Add / at start if not present
+          if (newPath.slice(0, 1) !== '/') {
+            newPath = `/${newPath}`;
+          }
+
+          // Remove index from end if present
+          if (newPath.slice(0 - index.length) === index) {
+            newPath = newPath.slice(0, 0 - index.length);
+          }
+
+          return newPath;
+        }
+      }))
+      .build((err) => {
+        if (err) {
+          return done(err);
+        }
+        equal('test/fixtures/private-mangle/expected', 'test/fixtures/private-mangle/build');
         return done();
       });
   });

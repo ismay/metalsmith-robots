@@ -56,8 +56,20 @@ You can pass options to `metalsmith-robots` with the [Javascript API](https://gi
 * `allow`: an array of the url(s) to allow - Array of Strings
 * `disallow`: an array of the url(s) to disallow - Array of Strings
 * `sitemap`: the sitemap url - String
+* `urlMangle`: mangle paths in `allow` and `disallow` - Function
 
 Besides these options, settings `public: true` or `private: true` in a file's frontmatter will add that page to the `allow` or `disallow` option respectively. `metalsmith-robots` expects at least one of the last three options, without them it will not generate a robots.txt.
+
+### urlMangle
+To make sure paths start with a `/` you can _mangle_ urls that are provided via `allow` and `disallow`.
+
+```js
+.use(robots({
+  urlMangle: (filepath) => {
+    return (filepath.slice(0, 1) !== '/') ? `/${filepath}` : filepath;
+  }
+}))
+```
 
 ## License
 
